@@ -16,7 +16,7 @@ email_df = email_df.fillna(0)
 
 
 email_df['date'] = pd.to_datetime(email_df['date'])
-email_df['date'] = email_df['date'].astype(np.int64) // 10**9  # Convert to Unix timestamp
+email_df['date'] = email_df['date'].astype(np.int64) // 10**9  
 email_df['user'] = email_df['user'].astype('category').cat.codes
 email_df['pc'] = email_df['pc'].astype('category').cat.codes
 email_df['from'] = email_df['from'].astype('category').cat.codes
